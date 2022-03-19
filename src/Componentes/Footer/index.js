@@ -1,10 +1,10 @@
 
 import './styles.css'
 
-export default function Footer(){
+export default function Footer(props){
     return (
         <div className='Footer'>
-            <p>0/4 CONCLUÍDOS</p>
+            <p>{props.concluidas}/{props.total} CONCLUÍDOS</p>
         </div>
     )
 }
