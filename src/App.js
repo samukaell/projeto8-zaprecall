@@ -37,8 +37,8 @@ export default function App() {
                     callback = {setValorFooter}
                 />
                 <Footer
-                    concluidas = {valorFooter.length}
-                    total = {dados.deckDriven.length}
+                    concluidas = {valorFooter}
+                    total = {dados.deckDriven}
                 />
                 <div className='espaco-final'></div>
             </div>

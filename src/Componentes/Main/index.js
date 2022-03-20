@@ -8,7 +8,7 @@ export default function Main(props){
 
     return(
         <div className='Main'>
-            {dados.deckDriven.sort().map((obj,index)=>
+            {dados.deckDriven.sort(() => 0.5 - Math.random()).map((obj,index)=>
                 <Flashcard 
                     numeroPergunta = {index+1}
                     pergunta = {obj.pergunta}
