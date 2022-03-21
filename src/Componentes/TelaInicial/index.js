@@ -1,11 +1,18 @@
-//import {useState} from 'react';
+import {useState} from 'react';
 import dados from '../../dados';
 import './styles.css'
 import logo from '../../midia/logo.png'
 
 export default function TelaInicial(props){
 
-    //const [valido,setValido] = useState(false);
+    const [deck,setDeck] = useState([]);
+    
+    function selecionarDeck(string){
+        console.log("Deck ->"+string);
+        console.log("Objeto deck ->");
+        setDeck({...dados[0]});
+        console.log(deck);
+    }
 
     return(
 
@@ -15,9 +22,9 @@ export default function TelaInicial(props){
                 <p className='Logo-texto'>ZapRecall</p>
             </div>
             <div className='caixa-deck'>
-                <select name="select">
+                <select name="select" onChange={e => selecionarDeck(e.target.value)}>
                     {Object.keys(dados).map((deck,index)=>{
-                        return(<option value={"valor"+index} key={index}>{deck}</option>)
+                        return(<option value={deck} key={index}>{deck}</option>)
                     })}
 
                 </select>

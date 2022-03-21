@@ -13,6 +13,7 @@ export default function App() {
 
     const [iniciarApp,setIniciarApp] = useState(false);
     const [valorFooter,setValorFooter] = useState([]);
+    
 
     function iniciar(){
         setIniciarApp(true);
